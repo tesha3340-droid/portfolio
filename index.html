@@ -10,7 +10,7 @@
     <style>
         * {
             margin: 0;
-            padding: 12px;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -300,30 +300,23 @@
                 opacity: 1;
             }
         }
-.profile-container {
-    width: 300px;
-    height: 300px;
-}
 
-.profile-circle {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--primary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3);
-    padding: 10px; /* THIS creates the pink ring */
-}
+        .profile-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
+        .profile-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3);
+            animation: pulse 3s infinite ease-in-out;
         }
 
         @keyframes pulse {
@@ -334,14 +327,23 @@
                 transform: scale(1.05);
             }
         }
+
+        .profile-inner {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 .profile-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
 }
-
-        }
 
         .stats-float {
             position: absolute;
@@ -857,9 +859,11 @@
 
         <div class="hero-image">
             <div class="profile-container">
-      <div class="profile-circle">
-    <img src="tesha.png" alt="Tesha Anvekar" class="profile-img">
-</div></div>
+                <div class="profile-circle">
+                <div class="profile-inner">
+    <img src="tesha.png.png" alt="Tesha Anvekar" class="profile-img">
+</div>
+                </div>
                 <div class="stats-float stat-1">
                     <div class="stat-number">40%</div>
                     <div class="stat-label">Brand Growth</div>
@@ -891,8 +895,8 @@
                 <div class="card-icon">📱</div>
                 <h3 class="card-title">Digital Marketing</h3>
                 <p class="card-text">
-                    Managing social media campaigns and Meta Ads to generate qualified leads. Expert in 
-                    performance tracking and optimization strategies.
+                    Managing social media campaigns and Meta Ads to generate qualified leads. 
+                 Performance tracking and optimization strategies.
                 </p>
             </div>
             
@@ -919,9 +923,9 @@
                     <div class="skill-name">Digital Marketing</div>
                 </div>
                 <div class="skill-bar">
-                    <div class="skill-progress" style="width: 0%" data-width="90%"></div>
+                    <div class="skill-progress" style="width: 0%" data-width="80%"></div>
                 </div>
-                <div class="skill-percentage">90%</div>
+                <div class="skill-percentage">80%</div>
             </div>
 
             <div class="skill-card">
@@ -1157,3 +1161,4 @@
     </script>
 </body>
 </html>
+
