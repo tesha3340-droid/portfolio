@@ -356,15 +356,17 @@ stat-1
         }
 
 .stat-1 {
-    top: 70px;
+    top: 15%;
     right: -40px;
 }
 
 .stat-2 {
-    bottom: 70px;
+    bottom: 15%;
     left: -40px;
 }
 
+
+        
         @keyframes floatStat {
             0%, 100% {
                 transform: translateY(0);
@@ -389,7 +391,7 @@ stat-1
         .about {
             padding: 8rem 5%;
             background: white;
-            position: absolute;;
+            position: relative;
         }
 
         .section-title {
@@ -536,6 +538,65 @@ stat-1
             font-weight: 600;
             color: var(--primary);
         }
+
+        /* Work Section */
+.work {
+    padding: 8rem 5%;
+    background: var(--light);
+    text-align: center;
+}
+
+.work-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.work-card {
+    background: white;
+    border-radius: 25px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255,107,157,0.2);
+}
+
+.work-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.work-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.work-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--secondary);
+}
+
+.work-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
 
         /* Experience Section */
         .experience {
@@ -830,6 +891,7 @@ stat-1
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">My Work</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -844,14 +906,15 @@ stat-1
         </div>
         
         <div class="hero-content">
-            <div class="hero-subtitle"> Aspiring Digital Marketing & Design </div>
+            <div class="hero-subtitle">Digital Marketing & Graphic Design</div>
             <h1 class="hero-title">Tesha<br>Anvekar</h1>
             <p class="hero-description">
-                Transforming brands through creative design and data-driven marketing strategies. Passionate about helping businesses grow, increase visibility, and build meaningful connections with their audiences.
+                BBA graduate transforming brands through creative design and data-driven marketing strategies. 
+                Passionate about helping businesses grow and connect with their audiences.
             </p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Let's Work Together</a>
-                <a href="#experience" class="btn btn-secondary">View My Work</a>
+                <a href="#work" class="btn btn-secondary">View My Work</a>
             </div>
         </div>
 
@@ -886,10 +949,8 @@ stat-1
         <div class="about-grid">
             <div class="about-card">
                 <div class="card-icon">🎨</div>
-                <h3 class=
-                    "card-title">Graphic Design</h3>
+                <h3 class="card-title">Graphic Design</h3>
                 <p class="card-text">
-                
                     Creating stunning visual content with Canva and AI-assisted tools. Specialized in social media 
                     designs that boost engagement and build brand consistency.
                 </p>
@@ -989,6 +1050,33 @@ stat-1
         </div>
     </section>
 
+    <!-- Work Section -->
+<section class="work scroll-reveal" id="work">
+    <h2 class="section-title">My Work</h2>
+    <p class="section-subtitle">Creative projects and campaign results</p>
+
+    <div class="work-container">
+
+        <div class="work-card">
+            <div class="work-header">
+                <div class="work-icon">📱</div>
+                <div class="work-title">Social Media Campaign</div>
+            </div>
+            <img src="Social Media Post Designs.pdf" alt="Project 1">
+        </div>
+
+        <div class="work-card">
+            <div class="work-header">
+                <div class="work-icon">🎨</div>
+                <div class="work-title">Portfolio Design</div>
+            </div>
+            <img src="cinematograpger-portfolio.pdf" alt="Project 2">
+        </div>
+        </div>
+
+    </div>
+</section>
+   
     <!-- Experience Section -->
     <section class="experience scroll-reveal" id="experience">
         <h2 class="section-title">Experience</h2>
@@ -1165,4 +1253,6 @@ stat-1
     </script>
 </body>
 </html>
+
+
 
