@@ -1280,6 +1280,13 @@ stat-1
                 shape.style.transform = `translate(${x}px, ${y}px)`;
             });
         });
+        // Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
     </script>
 </body>
 </html>
