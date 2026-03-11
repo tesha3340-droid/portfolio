@@ -9,6 +9,49 @@ stat-1
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+      /* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        transform: translateY(-200%);
+        transition: transform 0.4s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+}
         * {
             margin: 0;
             padding: 0;
@@ -796,11 +839,37 @@ stat-1
                 text-align: center;
                 padding-top: 120px;
             }
+@media (max-width: 768px) {
 
-            .hero-title {
-                font-size: 3rem;
-            }
+    .menu-toggle {
+        display: flex;
+    }
 
+    .nav-links {
+        display: flex;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        transform: translateY(-200%);
+        transition: transform 0.4s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+}
+          .hero-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+}
             .hero-image {
                 margin-top: 3rem;
             }
@@ -1280,6 +1349,7 @@ stat-1
                 shape.style.transform = `translate(${x}px, ${y}px)`;
             });
         });
+
         // Mobile Menu Toggle
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
